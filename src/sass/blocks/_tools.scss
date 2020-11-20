@@ -1,0 +1,23 @@
+.tools {
+	border-top: 2px solid rgb(136, 136, 136);
+	@media (max-width: 991px) {
+        display: none;
+	}
+}
+
+.tools__content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.tools__item {
+	img {
+		margin: 0 auto;
+	}
+
+	&:nth-child(n + 4) {
+		flex-grow: 3;
+	}
+}

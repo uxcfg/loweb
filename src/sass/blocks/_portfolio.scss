@@ -1,0 +1,161 @@
+.portfolio__header {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-bottom: 60px;
+}
+
+.portfolio__wrap {
+	margin: 0 auto;
+	max-width: 937px;
+}
+
+.card-portfolio__content {
+	width: 100%;
+	position: relative;
+	cursor: pointer;
+
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+	img {
+		width: 100%;
+	}
+}
+
+.card-portfolio__content-main {
+	@media (max-width: 768px) {
+		display: none;
+	}
+}
+
+.slider {
+	display: none;
+	@media (max-width: 768px) {
+		display: block;
+	}
+
+	img {
+		width: 100%;
+	}
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	color: $white;
+}
+
+.card-portfolio {
+	margin-bottom: 60px;
+	&:last-child { 
+		margin-bottom: 0;
+	}
+}
+
+.card-portfolio--header {
+	width: 49%;
+	max-width: 398px;
+	margin-bottom: 0;
+	margin-right: 10px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	@media (max-width: 991px) {
+		width: 100%;
+		max-width: none;
+		margin-right: 0;
+		margin-bottom: 40px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.card-portfolio__links {
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 30, 61, 0.5);
+
+	visibility: hidden;
+	opacity: 0;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	padding-bottom: 20px;
+
+	transition: opacity 0.2s linear, visibility 0.2s linear;
+
+	@media (max-width: 991px) {
+		display: none;
+	}
+}
+
+.card-portfolio__link {
+	color: white;
+	text-decoration: underline;
+	text-transform: uppercase;
+	font-size: 22px;
+	transition: color 0.2s linear;
+}
+
+.card-portfolio__link:hover {
+	color: rgb(211, 211, 211);
+}
+
+.card-portfolio__link:not(:last-child) {
+	margin-right: 20px;
+}
+
+.card-portfolio__link-mobile {
+	display: none;
+	text-align: center;
+
+	margin-top: 10px;
+
+	@media (max-width: 991px) {
+		display: block;
+	}
+}
+
+.card-portfolio__link--mobile {
+	display: inline-block;
+	color: #008b9a;
+	font-size: 20px;
+	text-decoration: none;
+
+	border-bottom: 1px solid #008b9a;
+	padding-bottom: 3px;
+
+	@media (max-width: 575px) {
+		font-size: 16px;
+	}
+}
+
+.card-portfolio__content:hover .card-portfolio__links {
+	visibility: initial;
+	opacity: 1;
+}
+
+.card-portfolio__title {
+	margin-top: 10px;
+	text-align: center;
+	font-size: 26px;
+	color: $d-blue;
+	font-weight: 500;
+	line-height: 1.2;
+
+	@media (max-width: 768px) {
+		&.card-portfolio__title-desktop {
+			display: none;
+		}
+	}
+
+	@media (max-width: 575px) {
+		font-size: 22px;
+	}
+}

@@ -1,0 +1,32 @@
+@import "swiper/swiper-bundle.css";
+@import "_variables.scss";
+@import "_functions.scss";
+@import "_reset.scss";
+@import "_mixins.scss";
+
+/* Common */
+.container-sm {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1100px;
+	padding: 0 15px;
+}
+
+.section {
+	padding: 100px 0;
+
+	@media (max-width: 768px) {
+		padding: 60px 0;
+	}
+}
+
+/* Styles */
+@import "./blocks/_header.scss";
+@import "./blocks/_modal.scss";
+@import "./blocks/_process.scss";
+@import "./blocks/_adapt.scss";
+@import "./blocks/_services.scss";
+@import "./blocks/_banner.scss";
+@import "./blocks/_portfolio.scss";
+@import "./blocks/_tools.scss";
+@import "./blocks/_footer.scss";

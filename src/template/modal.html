@@ -1,0 +1,56 @@
+<div class="modal" id="modal">
+	<div class="modal__wrap">
+		<form class="form" id="modalForm" action="/">
+			<svg class="close" id="closeModal">
+				<use xlink:href="img/sprite.svg#close"></use>
+			</svg>
+			<div class="form__group form__group--top">
+				<div class="form__item">
+					<input id="name" type="text" name="name" placeholder="Ваше имя *" />
+				</div>
+
+				<div class="form__item">
+					<input type="text" name="company" placeholder="Название компании" />
+				</div>
+
+				<div class="form__item">
+					<input id="phone" name="phone" type="tel" value=""  placeholder="Телефон *" />
+				</div>
+
+				<div class="form__item">
+					<input id="email" type="email" name="email" placeholder="Email" />
+				</div>
+			</div>
+
+			<div class="form__group">
+				<div class="form__item">
+					<textarea
+						
+						class=""
+						name="message"
+						id="message"
+						placeholder="Ваше сообщение *"
+					></textarea>
+				</div>
+			</div>
+
+			<div class="form__group form__group-upload">
+				<div class="form__item upload-text">
+					<input
+						id="modalFileText"
+						type="text"
+						disabled
+						placeholder="Прикрепить файл (не более 20МБ)"
+						value=""
+					/>
+				</div>
+				<div class="form__item upload-left">
+					<input id="modalFile" class="modalFile" value="" type="file" />
+					<label for="modalFile" class="btn btn-form"> ок </label>
+				</div>
+			</div>
+
+			<button class="btn btn-form btn-form--submit" type="submit">Отправить</button>
+		</form>
+	</div>
+</div>

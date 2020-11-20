@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
+		<title>Document</title>
+	</head>
+	<body>
+	
+		<header class="header">
+	<div class="header__wrap">
+		<div class="header__column-left">
+			<div class="header__column-left__wrap">
+				<div class="logo">
+					<img src="./img/header/logo.png" alt="logo" class="logo__img" />
+					<div class="logo__main">
+						<div class="logo__descr">Студия веб-дизайна</div>
+						<div class="logo__title">Loweb.ru</div>
+					</div>
+				</div>
+
+				<div class="header__text">
+					<p>дизайн и</p>
+					<p>интернет-технологии на</p>
+					<p>службе у вашего бизнеса</p>
+				</div>
+
+				<div class="info info--mobile">
+					<div class="info__row">
+						<a class="info__link" href="tel:+79056038228">
+							<svg class="phone phone--reverse">
+								<use xlink:href="img/sprite.svg#phone"></use>
+							</svg>
+							<span>+7 (905) 603 82 28</span>
+						</a>
+					</div>
+					<div class="info__row">
+						<a class="info__link" href="mailto:web@lanoptic.ru">
+							<svg class="email">
+								<use xlink:href="img/sprite.svg#email"></use>
+							</svg>
+							<span> web@lanoptic.ru</span>
+						</a>
+					</div>
+				</div>
+
+				<button id="showModalHeader" class="btn">Связаться с нами</button>
+			</div>
+		</div>
+
+		<div class="header__column-right">
+			<img
+				class="header__column-right__bg"
+				src="./img/header/header.png"
+				alt=""
+			/>
+			<div class="info info--desktop">
+				<div class="info__row">
+					<a class="info__link" href="tel:+79056038228">
+						<svg class="phone phone--reverse">
+							<use xlink:href="img/sprite.svg#phone"></use>
+						</svg>
+						<span>+7 (905) 603 82 28</span>
+					</a>
+				</div>
+				<div class="info__row">
+					<a class="info__link" href="mailto:web@lanoptic.ru">
+						<svg class="email">
+							<use xlink:href="img/sprite.svg#email"></use>
+						</svg>
+						<span> web@lanoptic.ru</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+ 
+		<div class="modal" id="modal">
+	<div class="modal__wrap">
+		<form class="form" id="modalForm" action="/">
+			<svg class="close" id="closeModal">
+				<use xlink:href="img/sprite.svg#close"></use>
+			</svg>
+			<div class="form__group form__group--top">
+				<div class="form__item">
+					<input id="name" type="text" name="name" placeholder="Ваше имя *" />
+				</div>
+
+				<div class="form__item">
+					<input type="text" name="company" placeholder="Название компании" />
+				</div>
+
+				<div class="form__item">
+					<input id="phone" name="phone" type="tel" value=""  placeholder="Телефон *" />
+				</div>
+
+				<div class="form__item">
+					<input id="email" type="email" name="email" placeholder="Email" />
+				</div>
+			</div>
+
+			<div class="form__group">
+				<div class="form__item">
+					<textarea
+						
+						class=""
+						name="message"
+						id="message"
+						placeholder="Ваше сообщение *"
+					></textarea>
+				</div>
+			</div>
+
+			<div class="form__group form__group-upload">
+				<div class="form__item upload-text">
+					<input
+						id="modalFileText"
+						type="text"
+						disabled
+						placeholder="Прикрепить файл (не более 20МБ)"
+						value=""
+					/>
+				</div>
+				<div class="form__item upload-left">
+					<input id="modalFile" class="modalFile" value="" type="file" />
+					<label for="modalFile" class="btn btn-form"> ок </label>
+				</div>
+			</div>
+
+			<button class="btn btn-form btn-form--submit" type="submit">Отправить</button>
+		</form>
+	</div>
+</div>
+
+		<main class="main">
+			<section class="section process">
+	<div class="container">
+		<div class="process__wrap">
+			<div class="section-header">
+				<h1 class="title title--sm">
+					САЙТЫ КОМПАНИЙ &bull; ПРОМОСТРАНИЦЫ &bull; ИНТЕРНЕТ-МАГАЗИНЫ &bull;
+					ГРУППЫ В СОЦСЕТЯХ
+				</h1>
+			</div>
+
+			<div class="process__content">
+				<div class="card">
+					<div class="card__img">
+						<img src="./img/process/chat.png" alt="chat" />
+					</div>
+
+					<div class="subtitle subtitle--card">1. Концепция</div>
+					<ul class="card__text">
+						<li>- опеределяем цели разработки</li>
+						<li>- планируем список разделов и собираем материал</li>
+						<li>- согласовываем бюджет и выбираем средства разработки</li>
+					</ul>
+				</div>
+
+				<div class="card">
+					<div class="card__img">
+						<img src="./img/process/design.png" alt="design" />
+					</div>
+
+					<div class="subtitle subtitle--card">2. Дизайн</div>
+					<ul class="card__text">
+						<li>- выбираем цветовую схему и шрифты</li>
+						<li>-выбираем стиль элементов оформления</li>
+						<li>- разрабатываем макет в формате PSD</li>
+					</ul>
+				</div>
+
+				<div class="card">
+					<div class="card__img">
+						<img src="./img/process/web.png" alt="web" />
+					</div>
+
+					<div class="subtitle subtitle--card">3. Разработка</div>
+					<ul class="card__text">
+						<li>- переносим макет на рабочую платформу</li>
+						<li>
+							- наполняем систему подготовленным материалом и передаём заказчику
+							для тестирования
+						</li>
+						<li>- после согласования проводим “боевой” запуск</li>
+					</ul>
+				</div>
+
+				<div class="card">
+					<div class="card__img">
+						<img src="./img/process/seo.png" alt="seo" />
+					</div>
+
+					<div class="subtitle subtitle--card">4. Продвижение</div>
+					<ul class="card__text">
+						<li>
+							- проводим SEO-оптимизацию для для поисковых систем Yandex и
+							Google
+						</li>
+						<li>- при необходимости, заказываем рекламу</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+			<section class="section adapt">
+	<div class="container">
+		<div class="section-header">
+			<h1 class="title">Адаптивность</h1>
+		</div>
+	</div>
+
+	<img class="adapt__desk" src="./img/adapt/responsive.jpg" alt="" />
+	<img class="adapt__mob" src="./img/adapt/mob-responsive.png" alt="" />
+</section>
+
+			<section class="section services">
+	<div class="container">
+		<div class="services__wrap container-sm">
+			<div class="section-header">
+				<h1 class="title">Услуги</h1>
+			</div>
+
+			<div class="services__content">
+				<div class="card-price">
+					<div class="card-price__wrap">
+						<div class="subtitle subtitle--price">1. Промостраница</div>
+						<div class="card-price__text card-price__text--yellow">
+							<p>
+								Простой одностраничный сайт под несколько разрешений (смартфон,
+								планшет, ПК). Может содержить описание компании/группы/человека,
+								контактную информацию, галерею изображений и форму заявки.
+							</p>
+							<span>От 20 000руб.</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="card-price">
+					<div class="card-price__wrap">
+						<div class="subtitle subtitle--price">2. Корпоративный сайт</div>
+						<div class="card-price__text card-price__text--blue">
+							<p>
+								Комплексное решение для компаний с большим числом посещений и
+								необходимостью решения сложных задач (например, подбор тура у
+								турагенства или онлайн-бронирование в кинотеатре).
+							</p>
+							<span>От 40 000руб.</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="card-price">
+					<div class="card-price__wrap">
+						<div class="subtitle subtitle--price">3. Интернет-магазин</div>
+						<div class="card-price__text card-price__text--green">
+							<p>
+								Интернет-магазин на 1C Bitrix с возможностью наполнения
+								товарами, категориями товаров и услуг. Интеграция с платежными
+								системами, банками и 1С:Управление торговлей. Расылка чеков
+								клиентам.
+							</p>
+							<span>От 50 000руб.</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="card-price">
+					<div class="card-price__wrap">
+						<div class="subtitle subtitle--price">4. Web-приложение</div>
+						<div class="card-price__text card-price__text--red">
+							<p>
+								Браузерное приложение для внутренего использования в компании.
+								Используется для автоматизаци процессов и хранения разнообразных
+								данных. Например, систематизация клиентской базы и анализ
+								прибыли от заказов по месяцам.
+							</p>
+							<span>От 30 000руб.</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="card-price">
+					<div class="card-price__wrap">
+						<div class="card-price__header">
+							<h3 class="subtitle subtitle--price subtitle--social">
+								Группы в соцсетях
+							</h3>
+
+							<div class="social">
+								<svg class="social__item">
+									<use xlink:href="img/sprite.svg#odnoklassniki"></use>
+								</svg>
+
+								<svg class="social__item">
+									<use xlink:href="img/sprite.svg#vk"></use>
+								</svg>
+
+								<svg class="social__item">
+									<use xlink:href="img/sprite.svg#instagram"></use>
+								</svg>
+
+								<svg class="social__item">
+									<use xlink:href="img/sprite.svg#facebook"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="card-price__text card-price__text--lightblue">
+							<p>
+								Разработка, дизайн и продвижение групп во всех популярных
+								социальных сетях. Настройка рекламной компании.
+							</p>
+							<span>От 10 000руб.</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+			<div class="section banner">
+	<div class="banner__wrap">
+		<div class="banner__left">
+			<img src="./img/code.png" alt="" />
+		</div>
+
+		<div class="banner__right">
+			<div class="banner__right-text">
+				Мы — web-студия, которая с радостью поможет реализовать идею Вашего
+				<span class="text--yellow">веб-сайта</span> или
+				<span class="text--blue">группы в соцсетях</span> от идеи до готового
+				решения.
+			</div>
+		</div>
+	</div>
+</div>
+
+			<section class="section portfolio">
+	<div class="container">
+		<div class="portfolio__wrap">
+			<div class="section-header">
+				<h1 class="title">Портфолио</h1>
+			</div>
+
+			<div class="portfolio__header">
+				<div class="card-portfolio card-portfolio--header">
+					<div class="card-portfolio__content">
+						<img src="./img/portfolio/kollegia.jpg" alt="" />
+
+						<div class="card-portfolio__links">
+							<a
+								class="card-portfolio__link"
+								href="http://advokat-kimry.ru/"
+								target="_blank"
+							>
+								advokat-kimry.ru
+							</a>
+						</div>
+					</div>
+
+					<div class="card-portfolio__title">
+						КА “Кимрская городская коллегия адвокатов”
+					</div>
+
+					<!-- Mobile link -->
+					<div class="card-portfolio__link-mobile">
+						<a
+							class="card-portfolio__link card-portfolio__link--mobile"
+							href="http://advokat-kimry.ru/"
+							target="_blank"
+						>
+							advokat-kimry.ru
+						</a>
+					</div>
+				</div>
+
+				<div class="card-portfolio card-portfolio--header">
+					<div class="card-portfolio__content">
+						<img src="./img/portfolio/arktica.jpg" alt="" />
+
+						<div class="card-portfolio__links">
+							<a
+								class="card-portfolio__link"
+								href="http://kimry-arktika.ru/"
+								target="_blank"
+							>
+								kimry-arktika.ru
+							</a>
+						</div>
+					</div>
+
+					<div class="card-portfolio__title">
+						Спортивный ледовый комплекс “Арктика”
+					</div>
+
+					<!-- Mobile link -->
+					<div class="card-portfolio__link-mobile">
+						<a
+							class="card-portfolio__link card-portfolio__link--mobile"
+							href="http://kimry-arktika.ru/"
+							target="_blank"
+						>
+							kimry-arktika.ru
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio__content">
+				<div class="card-portfolio">
+					<div class="card-portfolio__content card-portfolio__content-main">
+						<img src="./img/portfolio/lanoptic.jpg" alt="" />
+
+						<div class="card-portfolio__links">
+							<a
+								class="card-portfolio__link"
+								href="http://vk.com/lanoptic"
+								target="_blank"
+							>
+								vk.com/lanoptic
+							</a>
+
+							<a
+								class="card-portfolio__link"
+								href="http://instagram.com/lanoptic.ru"
+								target="_blank"
+							>
+								instagram.com/lanoptic.ru
+							</a>
+						</div>
+					</div>
+
+					<!-- Mobile slider -->
+					<div class="slider">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="slider-lanoptic__img">
+										<img src="./img/portfolio/lanoptic-mob_vk.png" alt="" />
+									</div>
+
+									<div class="card-portfolio__link-mobile">
+										<div class="card-portfolio__title">ООО “ЛАН-Оптик”</div>
+										<a
+											class="card-portfolio__link card-portfolio__link--mobile"
+											href="http://vk.com/lanoptic"
+											target="_blank"
+										>
+											vk.com/lanoptic
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="slider-lanoptic__img">
+										<img src="./img/portfolio/lanoptic-mob_inst.png" alt="" />
+									</div>
+
+									<div class="card-portfolio__link-mobile">
+										<div class="card-portfolio__title">ООО “ЛАН-Оптик”</div>
+										<a
+											class="card-portfolio__link card-portfolio__link--mobile"
+											href="http://instagram.com/lanoptic.ru"
+											target="_blank"
+										>
+											instagram.com/lanoptic.ru
+										</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
+					</div>
+
+					<div class="card-portfolio__title card-portfolio__title-desktop">
+						ООО “ЛАН-Оптик”
+					</div>
+				</div>
+
+				<div class="card-portfolio">
+					<div class="card-portfolio__content card-portfolio__content-main">
+						<img src="./img/portfolio/volzhanka.jpg" alt="" />
+
+						<div class="card-portfolio__links">
+							<a
+								class="card-portfolio__link"
+								href="http://www.cafe-volzhanka.online/"
+								target="_blank"
+							>
+								cafe-volzhanka.online
+							</a>
+
+							<a
+								class="card-portfolio__link"
+								href="http://vk.com/cafevolzhanka.online"
+								target="_blank"
+							>
+								vk.com/cafevolzhanka.online
+							</a>
+						</div>
+					</div>
+
+					<!-- Mobile slider -->
+					<div class="slider">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="slider-lanoptic__img">
+										<img src="./img/portfolio/volzh-mob_site.png" alt="" />
+										<div class="card-portfolio__title">Кафе “Волжанка”</div>
+										<div class="card-portfolio__link-mobile">
+											<a
+												class="card-portfolio__link card-portfolio__link--mobile"
+												href="http://www.cafe-volzhanka.online/"
+												target="_blank"
+											>
+												cafe-volzhanka.online
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="slider-lanoptic__img">
+										<img src="./img/portfolio/volzh-mob_vk.png" alt="" />
+										<div class="card-portfolio__title">Кафе “Волжанка”</div>
+										<div class="card-portfolio__link-mobile">
+											<a
+												class="card-portfolio__link card-portfolio__link--mobile"
+												href="http://vk.com/cafevolzhanka.online"
+												target="_blank"
+											>
+												vk.com
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
+					</div>
+
+					<div class="card-portfolio__title card-portfolio__title-desktop">
+						Кафе “Волжанка”
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+			<section class="section tools">
+	<div class="tools__wrap container-sm">
+		<div class="section-header">
+			<h1 class="title">Инструменты</h1>
+		</div>
+
+		<div class="tools__content">
+			<div class="tools__item">
+				<img src="./img/tools/1c.png" alt="" />
+			</div>
+			<div class="tools__item">
+				<img src="./img/tools/WordPress.png" alt="" />
+			</div>
+			<div class="tools__item">
+				<img src="./img/tools/Ruby.png" alt="" />
+			</div>
+			<div class="tools__item">
+				<img src="./img/tools/Amazon.png" alt="" />
+			</div>
+			<div class="tools__item">
+				<img src="./img/tools/Reg.png" alt="" />
+			</div>
+		</div>
+	</div>
+</section>
+
+		</main>
+		<section class="section footer">
+	<div class="container-sm">
+		<div class="footer__wrap">
+			<div class="footer__row footer__row-top">
+				<div class="logo logo-footer">
+					<img src="./img/header/logo.png" alt="logo" class="logo__img" />
+					<div class="logo__main logo__main-footer">
+						<div class="logo__descr logo__descr-footer">Студия веб-дизайна</div>
+						<div class="logo__title logo__title-footer">Loweb.ru</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer__row footer__row-bottom">
+				<div class="info info-footer">
+					<div class="info__row">
+						<a class="info__link" href="tel:+79056038228">
+							<svg class="phone phone--reverse">
+								<use xlink:href="img/sprite.svg#phone"></use>
+							</svg>
+							<span>+7 (905) 603 82 28</span>
+						</a>
+					</div>
+					<div class="info__row">
+						<a class="info__link" href="mailto:web@lanoptic.ru">
+							<svg class="email">
+								<use xlink:href="img/sprite.svg#email"></use>
+							</svg>
+							<span>web@lanoptic.ru</span>
+						</a>
+					</div>
+				</div>
+
+				<button id="showModalFooter" class="btn btn-footer">Связаться с нами</button>
+			</div>
+		</div>
+
+		<div class="footer__copyright">
+			<p>© 2020 ООО <a class="footer__link" href="http://lanoptic.ru/">“Лан-Оптик”</a></p>
+		</div>
+	</div>
+</section>
+
+		<script src="js/main.js"></script>
+	</body>
+</html>

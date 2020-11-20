@@ -1,0 +1,3 @@
+@function ptr($v) {
+	@return ($v / $font-d) + rem;
+}

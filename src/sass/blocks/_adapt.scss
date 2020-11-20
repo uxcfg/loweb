@@ -1,0 +1,27 @@
+.adapt {
+	&__desk {
+		display: block;
+	}
+
+	&__mob {
+		display: none;
+	}
+
+	@media (max-width: 768px) {
+		&__desk {
+			display: none;
+		}
+		&__mob {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+
+	@media (max-width: 768px) {
+		padding-top: 100px;
+	}
+
+	@media (max-width: 575px) {
+		padding: 50px 0;
+	}
+}

@@ -1,0 +1,4 @@
+@mixin br($c: #ccc) { 
+    border-left: 6px solid $c;
+    padding-left: 20px;
+};

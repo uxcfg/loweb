@@ -1,0 +1,46 @@
+.banner {
+	@media (max-width: 768px) {
+		display: none;
+	}
+}
+
+.banner__wrap {
+	display: flex;
+	background-color: $d-blue;
+}
+
+.banner__left {
+	width: 50%;
+}
+
+.banner__right {
+	width: 50%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.banner__right-text {
+	max-width: 730px;
+	color: $white;
+	font-weight: 600;
+	font-size: 34px;
+	line-height: 1.5;
+
+	@media (max-width: 1199px) {
+		font-size: 24px;
+	}
+
+	@media (max-width: 991px) {
+		font-size: 20px;
+	}
+}
+
+.text--yellow {
+	color: $b-blue;
+}
+
+.text--blue {
+	color: $yellow;
+}

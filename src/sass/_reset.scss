@@ -1,0 +1,84 @@
+* {
+	margin: 0;
+	padding: 0;
+	bottom: 0;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+
+ul li,
+ol li {
+	list-style: none;
+}
+
+html,
+body {
+	// font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+	// "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+	// "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	font-family: "Montserrat", sans-serif;
+	min-height: 100vh;
+	scroll-behavior: smooth;
+	color: $dark;
+	line-height: 1;
+	font-size: $font-d;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h3,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: 400;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+button {
+	cursor: pointer;
+}
+
+.container {
+	width: 100%;
+	max-width: 1700px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+// Экстрамалые девайсы («телефоны», < 576px)
+// @media (max-width: 575.98px) { ... }
+
+// Малые девайсы («ландшафтные», < 768px)
+// @media (max-width: 767.98px) { ... }
+
+// Средние девайсы («таблетки», < 992px)
+// @media (max-width: 991.98px) { ... }
+
+// Большие девайсы (большие десктопы, < 1200px)
+// @media (max-width: 1199.98px) { ... }
