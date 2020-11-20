@@ -1189,6 +1189,7 @@ button {
 }
 
 .modal {
+    z-index: 999;
     min-height: 100vh;
     position: fixed;
     top: 0;
@@ -1232,6 +1233,7 @@ button {
 }
 
 .modal__wrap {
+    z-index: 1000;
     border-radius: 10px;
     background-color: #1d3557;
 }
