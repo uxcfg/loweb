@@ -1,6 +1,6 @@
 <div class="modal" id="modal">
 	<div class="modal__wrap">
-		<form class="form" id="modalForm" action="/">
+		<form class="form" id="modalForm" action="/" enctype="multipart/form-data">
 			<svg class="close" id="closeModal">
 				<use xlink:href="img/sprite.svg#close"></use>
 			</svg>
@@ -10,7 +10,7 @@
 				</div>
 
 				<div class="form__item">
-					<input type="text" name="company" placeholder="Название компании" />
+					<input id="company" type="text" name="company" placeholder="Название компании" />
 				</div>
 
 				<div class="form__item">
@@ -44,13 +44,33 @@
 						value=""
 					/>
 				</div>
+
 				<div class="form__item upload-left">
 					<input id="modalFile" class="modalFile" value="" type="file" />
 					<label for="modalFile" class="btn btn-form"> ок </label>
 				</div>
+
 			</div>
+
+			<div class="send-loading">
+				<div class="send-loading__wrap">
+					<span class="loader loader-circles"></span>
+					Отправка...
+				</div>
+			</div>
+
+			<span class="form__captcha-error">Ошибка. Повторите попытку</span>
 
 			<button class="btn btn-form btn-form--submit" type="submit">Отправить</button>
 		</form>
+
+		<div class="popup-success">
+				<h1>Благодарим за ваше обращение!</h1>
+				<p>С вами скоро свяжется наш специалист!</p>
+		</div>
 	</div>
 </div>
+
+
+
+

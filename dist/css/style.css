@@ -782,6 +782,7 @@ ol li {
 html,
 body {
     font-family: "Montserrat", sans-serif;
+    font-weight: 400;
     min-height: 100vh;
     scroll-behavior: smooth;
     color: #333333;
@@ -834,6 +835,10 @@ button {
     width: 100%;
     max-width: 1100px;
     padding: 0 15px;
+}
+
+.container-sm-footer {
+    margin: 0;
 }
 
 .section {
@@ -1253,6 +1258,17 @@ button {
     overflow: hidden;
 }
 
+@media (max-width: 991px) {
+    .form {
+        overflow-y: scroll;
+        max-height: 100vh;
+    }
+}
+
+.form.hidden {
+    display: none;
+}
+
 .close {
     width: 20px;
     height: 20px;
@@ -1269,6 +1285,125 @@ button {
         -ms-transform: rotate(180);
         transform: rotate(180);
         fill: #00b695;
+    }
+}
+
+.send-loading {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1001;
+}
+
+.send-loading.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.send-loading__wrap {
+    color: #fff;
+}
+
+.loader {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+}
+
+.loader-circles {
+    border-radius: 50px;
+    border: 3px solid transparent;
+    border-top-color: #fff;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+}
+
+.loader-circles:before,
+.loader-circles:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    bottom: 5px;
+    right: 5px;
+    border-radius: 50px;
+    border: 3px solid transparent;
+    border-top-color: #fff;
+    filter: alpha(opacity=8);
+    -khtml-opacity: .8;
+    -moz-opacity: .8;
+    opacity: .8;
+    -webkit-animation: spinreverse 5s linear infinite;
+    animation: spinreverse 5s linear infinite;
+}
+
+.loader-circles:before {
+    top: 12px;
+    left: 12px;
+    bottom: 12px;
+    right: 12px;
+    -webkit-animation: spinreverse 10s linear infinite;
+    animation: spinreverse 10s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        tranform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        tranform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spinreverse {
+    0% {
+        -webkit-transform: rotate(0deg);
+        tranform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(-360deg);
+        tranform: rotate(-360deg);
+    }
+}
+
+@keyframes spinreverse {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
     }
 }
 
@@ -1347,9 +1482,15 @@ button {
 .form__item textarea {
     width: 100%;
     resize: vertical;
-    height: 150px;
     min-height: 150px;
     max-height: 250px;
+}
+
+@media (max-width: 767px) {
+    .form__item textarea {
+        min-height: 100px;
+        max-height: none;
+    }
 }
 
 .btn-form {
@@ -1359,6 +1500,7 @@ button {
     border-color: #fff;
     color: #fff;
     font-size: 22px;
+    height: 50px;
     margin-top: 40px;
     -webkit-transition: background-color 0.2s ease-out;
     -o-transition: background-color 0.2s ease-out;
@@ -1372,20 +1514,34 @@ button {
 }
 
 .btn-form--submit {
-    padding: 0.57em;
+    padding: 0.7em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: auto;
 }
 
-.modalFile {
-    font-size: 20px;
+@media (max-width: 767px) {
+    .btn-form--submit {
+        padding: 0.60em;
+        font-size: 18px;
+    }
 }
 
 .modalFile {
     position: absolute;
-    width: 0.1px;
-    height: 0.1px;
+    width: 1px;
+    height: 1px;
     opacity: 0;
     overflow: hidden;
     z-index: -1;
+    font-size: 20px;
 }
 
 .form__group-upload {
@@ -1411,8 +1567,19 @@ button {
     border-right: none;
 }
 
+.form__captcha-error {
+    display: none;
+    color: #ea3a49;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.form__captcha-error.error {
+    display: block;
+}
+
 .form__group-upload input {
-    border-radius: 0;
+    border-radius: 3px 0 0 3px;
 }
 
 .form__group-upload .upload-left {
@@ -1420,15 +1587,73 @@ button {
 }
 
 .form__group-upload .upload-left label {
-    border-radius: 0;
+    border: 3px solid #fff;
+    border-radius: 0px 3px 3px 0;
     text-align: center;
     padding: 11.6px;
     margin: 0;
     cursor: pointer;
 }
 
-.form__item .error {
+.form__item input.error, .form__item textarea.error {
     border-color: #ea3a49;
+}
+
+.popup-success {
+    display: none;
+    max-width: 400px;
+    padding: 30px 20px;
+    border-radius: 10px;
+    background-color: #001e3d;
+    text-align: center;
+    color: #fff;
+}
+
+.popup-success h1 {
+    font-size: 30px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.popup-success p {
+    font-size: 20px;
+}
+
+@media (max-width: 991px) and (orientation: landscape) {
+    .popup-success {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .popup-success {
+        border-radius: 0 0 10px 10px;
+        max-width: 100%;
+    }
+
+    .popup-success h1 {
+        font-size: 24px;
+    }
+
+    .popup-success p {
+        font-size: 18px;
+    }
+}
+
+.popup-success.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
 @media (max-width: 768px) {

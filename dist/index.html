@@ -5,9 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="shortcut icon" href="./img/fav-logo.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
-  <title>Document</title>
+  <title>Loweb</title>
 </head>
 
 <body>
@@ -79,7 +80,7 @@
 
   <div class="modal" id="modal">
     <div class="modal__wrap">
-      <form class="form" id="modalForm" action="/">
+      <form class="form" id="modalForm" action="/" enctype="multipart/form-data">
         <svg class="close" id="closeModal">
           <use xlink:href="img/sprite.svg#close"></use>
         </svg>
@@ -89,7 +90,7 @@
           </div>
 
           <div class="form__item">
-            <input type="text" name="company" placeholder="Название компании" />
+            <input id="company" type="text" name="company" placeholder="Название компании" />
           </div>
 
           <div class="form__item">
@@ -111,16 +112,36 @@
           <div class="form__item upload-text">
             <input id="modalFileText" type="text" disabled placeholder="Прикрепить файл (не более 20МБ)" value="" />
           </div>
+
           <div class="form__item upload-left">
             <input id="modalFile" class="modalFile" value="" type="file" />
             <label for="modalFile" class="btn btn-form"> ок </label>
           </div>
+
         </div>
+
+        <div class="send-loading">
+          <div class="send-loading__wrap">
+            <span class="loader loader-circles"></span>
+            Отправка...
+          </div>
+        </div>
+
+        <span class="form__captcha-error">Ошибка. Повторите попытку</span>
 
         <button class="btn btn-form btn-form--submit" type="submit">Отправить</button>
       </form>
+
+      <div class="popup-success">
+        <h1>Благодарим за ваше обращение!</h1>
+        <p>С вами скоро свяжется наш специалист!</p>
+      </div>
     </div>
   </div>
+
+
+
+
 
   <main class="main">
     <section class="section process">
@@ -523,8 +544,8 @@
     </section>
 
   </main>
-  <section class="section footer">
-    <div class="container-sm">
+  <footer class="section footer">
+    <div class="container-sm container-sm-footer">
       <div class="footer__wrap">
         <div class="footer__row footer__row-top">
           <div class="logo logo-footer">
@@ -565,7 +586,7 @@
         </p>
       </div>
     </div>
-  </section>
+  </footer>
 
   <script src="js/main.js"></script>
 </body>
